@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
+    "C:\\Users\\igaming user\\OneDrive - Universidad Fidélitas\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
+    "C:\\Users\\igaming user\\OneDrive - Universidad Fidélitas\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\igaming user\\OneDrive - Universidad Fidélitas\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
         "projectName": "SalonPrograAvanzadaWeb",
-        "projectPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-        "packagesPath": "C:\\Users\\sroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+        "projectPath": "C:\\Users\\igaming user\\OneDrive - Universidad Fidélitas\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "packagesPath": "C:\\Users\\igaming user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igaming user\\OneDrive - Universidad Fidélitas\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\igaming user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
