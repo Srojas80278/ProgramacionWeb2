@@ -17,47 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SalonPrograAvanzadaWeb
 build_property.RootNamespace = SalonPrograAvanzadaWeb
-build_property.ProjectDir = C:\Users\igaming user\OneDrive - Universidad Fidélitas\GitHub\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb\
+build_property.ProjectDir = C:\Users\carlo\Desktop\I4atri2024\Progra Web Avanzada\Proyecto\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\igaming user\OneDrive - Universidad Fidélitas\GitHub\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb
+build_property.MSBuildProjectDirectory = C:\Users\carlo\Desktop\I4atri2024\Progra Web Avanzada\Proyecto\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/Index.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/IniciarSesion.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaWFyU2VzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/RegistrarUsuario.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/RegistrarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXJVc3VhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/Error.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/IniciarSesion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5pY2lhclNlc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RecoverAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVjb3ZlckFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RegisterAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXJBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewImports.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewStart.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qf2to8zqvs
 
-[C:/Users/igaming user/OneDrive - Universidad Fidélitas/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout_Externo.cshtml]
+[C:/Users/carlo/Desktop/I4atri2024/Progra Web Avanzada/Proyecto/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout_Externo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfRXh0ZXJuby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-68597ikblu

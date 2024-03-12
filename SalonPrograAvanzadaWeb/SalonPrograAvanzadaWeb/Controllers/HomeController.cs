@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using SalonPrograAvanzadaWeb.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SalonPrograAvanzadaWeb.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,7 +14,7 @@ namespace SalonPrograAvanzadaWeb.Controllers
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
             return View();
