@@ -1,5 +1,6 @@
 using SalonPrograAvanzadaWeb.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using SalonPrograAvanzadaWeb.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +11,10 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
+builder.Services.AddSingleton<IProveedorModel, ProveedorModel>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => {
-    option.LoginPath = "/Login/IniciarSesion";
+	option.LoginPath = "/Login/IniciarSesion";
 });
 
 var app = builder.Build();
@@ -36,6 +38,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=IniciarSesion}/{id?}");
+    pattern: "{controller=Proveedor}/{action=RegistrarProveedor}/{id?}");
 
 app.Run();

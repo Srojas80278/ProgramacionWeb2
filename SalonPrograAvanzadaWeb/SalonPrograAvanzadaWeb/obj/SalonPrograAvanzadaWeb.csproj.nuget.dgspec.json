@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carlo\\Desktop\\I4atri2024\\Progra Web Avanzada\\Proyecto\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
+    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carlo\\Desktop\\I4atri2024\\Progra Web Avanzada\\Proyecto\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
+    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carlo\\Desktop\\I4atri2024\\Progra Web Avanzada\\Proyecto\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
         "projectName": "SalonPrograAvanzadaWeb",
-        "projectPath": "C:\\Users\\carlo\\Desktop\\I4atri2024\\Progra Web Avanzada\\Proyecto\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carlo\\Desktop\\I4atri2024\\Progra Web Avanzada\\Proyecto\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+        "projectPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "packagesPath": "C:\\Users\\sroja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,11 +42,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [

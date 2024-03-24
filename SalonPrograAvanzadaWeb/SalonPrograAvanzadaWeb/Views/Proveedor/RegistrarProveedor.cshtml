@@ -1,0 +1,45 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.ProveedorEnt
+
+@{
+	ViewData["Title"] = "RegistrarProveedor";
+}
+
+<h1>RegistrarProveedor</h1>
+
+<h4>ProveedorEnt</h4>
+<br>
+<br>
+
+<br>
+
+<br>
+
+
+
+@using (Html.BeginForm("RegistrarProveedor", "Proveedor", FormMethod.Post))
+{
+	<div class="row">
+		<div class="col-md-4">
+			<form asp-action="RegistrarProveedor">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				@Html.Label("nombre_proveedor")
+				@Html.TextBoxFor(x => x.nombre_proveedor, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
+
+				@Html.Label("numero_contacto")
+				@Html.TextBoxFor(x => x.numero_contacto, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
+
+				@Html.Label("email")
+				@Html.TextBoxFor(x => x.email, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
+
+				@Html.Label("direccion")
+				@Html.TextBoxFor(x => x.direccion, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block">Procesar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+}
+
