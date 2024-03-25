@@ -26,5 +26,19 @@ namespace SalonPrograAvanzadaWeb.Controllers
                 return RedirectToAction("ERROR", "Producto");
             }
         }
-    }
+
+		[HttpGet]
+		public IActionResult ConsultarProveedores()
+		{
+			var respuestaModelo = _proveedorModel.ConsultarProveedores();
+
+			if (respuestaModelo?.Codigo == "1")
+				return View(respuestaModelo?.Datos);
+			else
+			{
+				ViewBag.MsjPantalla = respuestaModelo?.Mensaje;
+				return View(new List<ProveedorEnt>());
+			}
+		}
+	}
 }

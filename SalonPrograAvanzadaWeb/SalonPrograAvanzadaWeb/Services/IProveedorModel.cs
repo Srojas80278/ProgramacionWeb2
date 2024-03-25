@@ -4,6 +4,7 @@ namespace SalonPrograAvanzadaWeb.Services
 {
     public interface IProveedorModel
     {
-         Respuesta? RegistrarProveedor(ProveedorEnt entidad);
-    }
+        Respuesta? RegistrarProveedor(ProveedorEnt entidad);
+		ProveedorRespuesta? ConsultarProveedores();
+	}
 }

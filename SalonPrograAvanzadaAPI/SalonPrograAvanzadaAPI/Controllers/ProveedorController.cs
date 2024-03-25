@@ -46,21 +46,37 @@ namespace SalonPrograAvanzadaAPI.Controllers
                 }
             }
         }
+		[AllowAnonymous]
+		[Route("ConsultarProveedores")]
+		[HttpGet]
+		public IActionResult ConsultarProveedores()
+		{
+			using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+			{
+				ProveedorRespuesta proveedorRespuesta = new ProveedorRespuesta();
 
-        [AllowAnonymous]
-        [Route("ConsultarProveedores")]
-        [HttpGet]
-        public IActionResult ConsultarProveedores()
-        {
-            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
-            {
-                var result = db.Query<ProveedorEnt>("prov_LeerProveedores", new { },
-                  commandType: CommandType.StoredProcedure).ToList();
-                return Ok(result);
-            }
-        }
+				var resultadoBD = db.Query<ProveedorEnt>("prov_LeerProveedores",
+					new { },
+					commandType: CommandType.StoredProcedure).ToList();
 
-        [AllowAnonymous]
+				if (resultadoBD == null || resultadoBD.Count == 0)
+				{
+					proveedorRespuesta.Codigo = "-1";
+					proveedorRespuesta.Mensaje = "No hay productos registrados.";
+				}
+				else
+				{
+					proveedorRespuesta.Datos = resultadoBD; //Retorna los Json
+				}
+
+				return Ok(proveedorRespuesta);
+			}
+		}
+
+
+
+
+		[AllowAnonymous]
         [Route("ActualizarProveedor")]
         [HttpPut]
         public IActionResult ActualizarProveedor(ProveedorEnt q)

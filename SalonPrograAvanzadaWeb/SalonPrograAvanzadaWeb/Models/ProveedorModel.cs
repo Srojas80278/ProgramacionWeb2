@@ -1,5 +1,7 @@
-﻿using SalonPrograAvanzadaWeb.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using SalonPrograAvanzadaWeb.Entities;
 using SalonPrograAvanzadaWeb.Services;
+using System.Net.Http.Headers;
 
 namespace SalonPrograAvanzadaWeb.Models
 {
@@ -14,8 +16,18 @@ namespace SalonPrograAvanzadaWeb.Models
             var RespuestaApi = _http.PostAsync(url, body).Result;
             if (RespuestaApi.IsSuccessStatusCode)
                 return RespuestaApi.Content.ReadFromJsonAsync<Respuesta>().Result;
-
             return null;
         }
-    }
+
+		public ProveedorRespuesta? ConsultarProveedores()
+		{
+			string url = _configuration.GetSection("settings:UrlApi").Value + "api/Proveedor/ConsultarProveedores";
+			var resp = _http.GetAsync(url).Result;
+
+			if (resp.IsSuccessStatusCode)
+				return resp.Content.ReadFromJsonAsync<ProveedorRespuesta>().Result;
+
+			return null;
+		}
+	}
 }

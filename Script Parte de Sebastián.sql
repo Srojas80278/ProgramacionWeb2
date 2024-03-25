@@ -2,7 +2,7 @@
 ALTER TABLE [dbo].[Proveedores]
 ADD CONSTRAINT UQ_Email UNIQUE ([email]);
 
--- #1 Procedimiento Almacenado Proveedores | Crear Proveedor:
+-- #1 Procedimiento Almacenado Proveedores | Crear Proveedor:123123
 CREATE PROCEDURE prov_CrearProveedor
     @nombre_proveedor    varchar(255),
     @numero_contacto     varchar(20),
