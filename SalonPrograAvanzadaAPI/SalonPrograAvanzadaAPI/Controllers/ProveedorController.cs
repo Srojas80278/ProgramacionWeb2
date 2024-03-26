@@ -6,15 +6,12 @@ using System.Data;
 using Dapper;
 using SalonPrograAvanzadaAPI.Entities;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace SalonPrograAvanzadaAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ProveedorController(IConfiguration _configuration) : ControllerBase
     {
-
         [AllowAnonymous]
         [Route("RegistrarProveedor")]
         [HttpPost]
@@ -46,6 +43,7 @@ namespace SalonPrograAvanzadaAPI.Controllers
                 }
             }
         }
+
 		[AllowAnonymous]
 		[Route("ConsultarProveedores")]
 		[HttpGet]
@@ -73,9 +71,6 @@ namespace SalonPrograAvanzadaAPI.Controllers
 			}
 		}
 
-
-
-
 		[AllowAnonymous]
         [Route("ActualizarProveedor")]
         [HttpPut]
@@ -87,7 +82,7 @@ namespace SalonPrograAvanzadaAPI.Controllers
             {
                 var result = db.Execute("prov_ActualizarProveedores",
                     new
-                    { q.id_proveedor,
+                    {   q.id_proveedor,
                         q.nombre_proveedor,
                         q.numero_contacto,
                         q.email,

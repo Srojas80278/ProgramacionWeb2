@@ -29,5 +29,15 @@ namespace SalonPrograAvanzadaWeb.Models
 
 			return null;
 		}
-	}
+
+        public Respuesta? BorrarProveedor(long id_proveedor)
+        {
+            string url = _configuration.GetSection("settings:UrlApi").Value + "api/Proveedor/BorrarProveedor?id_proveedor=" + id_proveedor;
+            var resp = _http.DeleteAsync(url).Result;
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<Respuesta>().Result;
+
+            return null;
+        }
+    }
 }

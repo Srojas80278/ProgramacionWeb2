@@ -22,16 +22,18 @@
 	<link href="~/lib/assets/css/style.css" rel="stylesheet">
 	<!-- Custom Styles -->
 	
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
+
+
 	
 </head>
 
 <body>
 
 	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top ">
+	<header id="header" class="fixed-top">
 		<div class="container d-flex align-items-center">
-
 			<h1 class="logo me-auto"><a href="index.html">Salon De Belleza</a></h1>
 			<!-- Uncomment below if you prefer to use an image logo -->
 			<!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -64,7 +66,7 @@
 					<li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
 
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+						<a class="bi bi-gear" href="#" id="profileDropdown">
 							@if (User.Identity.IsAuthenticated)
 							{
 								<span>@User.FindFirst(ClaimTypes.NameIdentifier)?.Value</span>
@@ -76,20 +78,11 @@
 							<li><a class="dropdown-item" asp-controller="Login" asp-action="CerrarSesion">Cerrar Sesión</a></li>
 						</ul>
 					</li>
-
-
-					</ul>
-					
-				
+				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
-			
-			
 		</div>
 	</header><!-- End Header -->
-	
-	
-	
 	@RenderBody()
 
 

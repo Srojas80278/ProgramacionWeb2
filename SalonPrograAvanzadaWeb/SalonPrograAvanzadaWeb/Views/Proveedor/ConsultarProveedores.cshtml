@@ -1,0 +1,90 @@
+﻿@model IEnumerable<SalonPrograAvanzadaWeb.Entities.ProveedorEnt>
+
+@{
+    ViewData["Title"] = "ConsultarProveedores";
+}
+
+<div class="container">
+    <h1>ConsultarProveedores</h1>
+    <h1>ConsultarProveedores</h1>
+    <h1>ConsultarProveedores</h1>
+    <h1>ConsultarProveedores</h1>
+    <p>
+        <a asp-action="" class="btn btn-primary">Create New</a>
+    </p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Proveedor</th>
+                    <th>Número de Contacto</th>
+                    <th>Correo Electrónico</th>
+                    <th>Dirección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.id_proveedor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nombre_proveedor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.numero_contacto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.direccion)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", new { id = item.id_proveedor })" class="btn btn-primary">Edit</a> <!-- Agregar clases de Bootstrap a los enlaces -->
+                            <button type="button" class="btn btn-primary passingID" data-toggle="modal" data-target="#exampleModal"
+                                    data-id="@item.id_proveedor" data-name="@item.nombre_proveedor">
+                                <i class="fa fa-trash-o faa-pulse animated"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(".passingID").click(function () {
+        $("#id_proveedor").val($(this).attr('data-id'));
+        $("#Question").text("¿Desea eliminar el proveedor " + $(this).attr('data-name') + "?");
+    });
+</script>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("BorrarProveedor", "Proveedor", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <input type="hidden" id="id_proveedor" name="id_proveedor" value="">
+                    <p id="Question" style="font-weight: bold;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Procesar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
