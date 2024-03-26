@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalonPrograAvanzadaWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+684dc10628a740a1dec733ff3193db853ee0a384")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a2990551111561aaae08f324059acc2d319b9c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalonPrograAvanzadaWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalonPrograAvanzadaWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

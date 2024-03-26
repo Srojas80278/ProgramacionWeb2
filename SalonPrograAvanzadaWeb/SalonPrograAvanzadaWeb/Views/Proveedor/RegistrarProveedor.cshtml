@@ -3,43 +3,44 @@
 @{
 	ViewData["Title"] = "RegistrarProveedor";
 }
+<div class="container" style="margin-top:10%">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center card-title">Registrar Proveedor</h4>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("RegistrarProveedor", "Proveedor", FormMethod.Post, new { @class = "needs-validation" }))
+                    {
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<h1>RegistrarProveedor</h1>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.nombre_proveedor, "Nombre Proveedor:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.nombre_proveedor, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
+                        </div>
 
-<h4>ProveedorEnt</h4>
-<br>
-<br>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.numero_contacto, "Número del Proveedor:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.numero_contacto, new { @class = "form-control", @placeholder = "Ingerese el número del proveedor", @required = "true" })
+                        </div>
 
-<br>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.email, "Correo Electrónico:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.email, new { @class = "form-control", @placeholder = "Ingrese un correo electrónico", @required = "true" })
+                        </div>
 
-<br>
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.direccion, "Dirección:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.direccion, new { @class = "form-control", @placeholder = "Ingrese la direccion del proveedor:", @required = "true" })
+                        </div>
 
-
-
-@using (Html.BeginForm("RegistrarProveedor", "Proveedor", FormMethod.Post))
-{
-	<div class="row">
-		<div class="col-md-4">
-			<form asp-action="RegistrarProveedor">
-				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-				@Html.Label("nombre_proveedor")
-				@Html.TextBoxFor(x => x.nombre_proveedor, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
-
-				@Html.Label("numero_contacto")
-				@Html.TextBoxFor(x => x.numero_contacto, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
-
-				@Html.Label("email")
-				@Html.TextBoxFor(x => x.email, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
-
-				@Html.Label("direccion")
-				@Html.TextBoxFor(x => x.direccion, new { @class = "form-control", @placeholder = "Nombre", @required = "true" })
-
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block">Procesar</button>
-				</div>
-			</form>
-		</div>
-	</div>
-}
-
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary btn-block">Procesar</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

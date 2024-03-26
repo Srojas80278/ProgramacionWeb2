@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SalonPrograAvanzadaWeb.Entities;
 using SalonPrograAvanzadaWeb.Services;
+using static System.Net.WebRequestMethods;
+using System.Net.Http.Headers;
 
 namespace SalonPrograAvanzadaWeb.Controllers
 {
@@ -41,7 +43,31 @@ namespace SalonPrograAvanzadaWeb.Controllers
 			}
 		}
 
-        [HttpPost]
+
+		[HttpGet]
+		public IActionResult ActualizarProveedor(long id_proveedor)
+		{
+			var respuestaModelo = _proveedorModel.ConsultarUnProveedor(id_proveedor);
+			return View(respuestaModelo?.Dato);
+		}
+
+
+		[HttpPost]
+		public IActionResult ActualizarProveedor(ProveedorEnt entidad)
+		{
+			var respuestaModelo = _proveedorModel.ActualizarProveedor(entidad);
+
+			if (respuestaModelo?.Codigo == "1")
+				return RedirectToAction("ConsultarProveedores", "Proveedor");
+			else
+			{
+				ViewBag.MsjPantalla = respuestaModelo?.Mensaje;
+				return View();
+			}
+		}
+
+
+		[HttpPost]
         public IActionResult BorrarProveedor(ProveedorEnt entidad)
         {
             var respuestaModelo = _proveedorModel.BorrarProveedor(entidad.id_proveedor);

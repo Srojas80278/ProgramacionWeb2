@@ -47,8 +47,25 @@ BEGIN
 END
 GO
 
+-- #3 Procedimiento Almacenado Proveedores | Leer un único Proveedores:
 
--- #3 Procedimiento Almacenado Proveedores | Actualizar Proveedor:
+CREATE PROCEDURE prov_ConsultarUnProveedor
+    @id_proveedor INT
+AS
+BEGIN
+    SELECT id_proveedor, 
+           nombre_proveedor, 
+           numero_contacto, 
+           email, 
+           direccion 
+    FROM Proveedores
+    WHERE id_proveedor = @id_proveedor;
+END
+GO
+-- EXEC prov_ConsultarUnProveedor @id_proveedor = 20; 
+
+
+-- #4 Procedimiento Almacenado Proveedores | Actualizar Proveedor:
 CREATE PROCEDURE prov_ActualizarProveedores
     @id_proveedor BIGINT,
     @nombre_proveedor VARCHAR(255),
@@ -85,7 +102,7 @@ SELECT * FROM Proveedores;
 */
 
 
--- #4 Procedimiento Almacenado Proveedores | Borrar Proveedor:
+-- #5 Procedimiento Almacenado Proveedores | Borrar Proveedor:
 CREATE PROCEDURE prov_BorrarProveedor
     @id_proveedor BIGINT
 AS

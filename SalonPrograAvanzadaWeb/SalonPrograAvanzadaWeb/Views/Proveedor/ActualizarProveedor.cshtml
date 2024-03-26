@@ -1,0 +1,71 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.ProveedorEnt
+
+@{
+    ViewData["Title"] = "ActualizarProveedor";
+}
+
+<h1>Actualizar Proveedor</h1>
+
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="card card-secondary" style="margin-top:2%">
+            <div class="card-header">
+                <h3 class="card-title">Actualización de Proveedor</h3>
+            </div>
+
+            @using (Html.BeginForm("ActualizarProveedor", "Proveedor", FormMethod.Post))
+            {
+                @Html.HiddenFor(x => x.id_proveedor)
+
+                <div class="card-body">
+                    @Html.Label("nombre_proveedor")
+                    @Html.TextBoxFor(x => x.nombre_proveedor, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "nombre_proveedor",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.Label("numero_contacto")
+                    @Html.TextBoxFor(x => x.numero_contacto, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "numero_contacto",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.Label("email")
+                    @Html.TextBoxFor(x => x.email, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "email",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.Label("direccion")
+                    @Html.TextBoxFor(x => x.direccion, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "direccion",
+                            @required = "true"
+                        })
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Procesar</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

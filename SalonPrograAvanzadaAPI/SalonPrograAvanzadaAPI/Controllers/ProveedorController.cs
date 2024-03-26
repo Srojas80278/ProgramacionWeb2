@@ -72,6 +72,34 @@ namespace SalonPrograAvanzadaAPI.Controllers
 		}
 
 		[AllowAnonymous]
+		[Route("ConsultarUnProveedor")]
+		[HttpGet]
+		public IActionResult ConsultarUnProveedor(long id_proveedor)
+		{
+			using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+			{
+				ProveedorRespuesta proveedorRespuesta = new ProveedorRespuesta();
+
+				var result = db.Query<ProveedorEnt>("prov_ConsultarUnProveedor",
+					new { id_proveedor },
+					commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+				if (result == null)
+				{
+					proveedorRespuesta.Codigo = "-1";
+					proveedorRespuesta.Mensaje = "No hay proveedores registrados.";
+				else
+				{
+					proveedorRespuesta.Dato = result;
+				}
+
+				return Ok(proveedorRespuesta);
+			}
+		}
+
+
+
+		[AllowAnonymous]
         [Route("ActualizarProveedor")]
         [HttpPut]
         public IActionResult ActualizarProveedor(ProveedorEnt q)
@@ -102,6 +130,7 @@ namespace SalonPrograAvanzadaAPI.Controllers
                 }
             }
         }
+
 
         [AllowAnonymous]
         [Route("BorrarProveedor")]
