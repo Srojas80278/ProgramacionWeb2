@@ -43,14 +43,12 @@ namespace SalonPrograAvanzadaWeb.Controllers
 			}
 		}
 
-
 		[HttpGet]
 		public IActionResult ActualizarProveedor(long id_proveedor)
 		{
 			var respuestaModelo = _proveedorModel.ConsultarUnProveedor(id_proveedor);
 			return View(respuestaModelo?.Dato);
 		}
-
 
 		[HttpPost]
 		public IActionResult ActualizarProveedor(ProveedorEnt entidad)
@@ -65,7 +63,6 @@ namespace SalonPrograAvanzadaWeb.Controllers
 				return View();
 			}
 		}
-
 
 		[HttpPost]
         public IActionResult BorrarProveedor(ProveedorEnt entidad)

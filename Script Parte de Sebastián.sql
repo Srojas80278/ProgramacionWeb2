@@ -35,7 +35,7 @@ EXEC prov_CrearProveedor
 
 
 -- #2 Procedimiento Almacenado Proveedores | Leer Proveedores:
-Create PROCEDURE prov_LeerProveedores
+CREATE PROCEDURE prov_LeerProveedores
 AS
 BEGIN
     SELECT id_proveedor, 

@@ -11,7 +11,5 @@ namespace SalonPrograAvanzadaWeb.Services
 		Respuesta? ActualizarProveedor(ProveedorEnt entidad);
 
 		Respuesta? BorrarProveedor(long id_proveedor);
-
-
 	}
 }
