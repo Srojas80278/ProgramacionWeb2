@@ -6436,19 +6436,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sroja\\.nuget\\packages\\": {}
+    "C:\\Users\\juank\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+      "projectUniqueName": "C:\\Users\\juank\\OneDrive\\Documents\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
       "projectName": "SalonPrograAvanzadaWeb",
-      "projectPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-      "packagesPath": "C:\\Users\\sroja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+      "projectPath": "C:\\Users\\juank\\OneDrive\\Documents\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+      "packagesPath": "C:\\Users\\juank\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juank\\OneDrive\\Documents\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6456,6 +6461,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
