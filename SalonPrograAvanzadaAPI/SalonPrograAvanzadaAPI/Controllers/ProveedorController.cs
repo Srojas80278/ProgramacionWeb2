@@ -66,7 +66,6 @@ namespace SalonPrograAvanzadaAPI.Controllers
 				{
 					proveedorRespuesta.Datos = resultadoBD; //Retorna los Json
 				}
-
 				return Ok(proveedorRespuesta);
 			}
 		}
@@ -88,6 +87,7 @@ namespace SalonPrograAvanzadaAPI.Controllers
 				{
 					proveedorRespuesta.Codigo = "-1";
 					proveedorRespuesta.Mensaje = "No hay proveedores registrados.";
+				}
 				else
 				{
 					proveedorRespuesta.Dato = result;
@@ -96,8 +96,6 @@ namespace SalonPrograAvanzadaAPI.Controllers
 				return Ok(proveedorRespuesta);
 			}
 		}
-
-
 
 		[AllowAnonymous]
         [Route("ActualizarProveedor")]
@@ -130,7 +128,6 @@ namespace SalonPrograAvanzadaAPI.Controllers
                 }
             }
         }
-
 
         [AllowAnonymous]
         [Route("BorrarProveedor")]
