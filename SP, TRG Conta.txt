@@ -1,0 +1,56 @@
+CREATE PROCEDURE ConsultarContabilidad
+AS
+BEGIN
+    SELECT 
+        co.id_movimiento,
+        co.descripcion_movimiento,
+        co.monto,
+        co.fecha_movimiento,
+        co.tipo_movimiento,
+        co.tipo_transaccion,
+        co.saldo_pendiente,
+        p.nombre_producto AS nombre_producto,
+        ci.nombre_cliente AS nombre_cliente,
+        u.nombre AS nombre_usuario
+    FROM Contabilidad co
+    LEFT JOIN Inventario p ON co.id_producto = p.id_producto
+    LEFT JOIN Citas ci ON co.id_cita = ci.id_cita
+    LEFT JOIN Usuarios u ON co.id_usuario = u.id_usuario;
+END
+
+CREATE TRIGGER TRG_InsertInventario
+ON Inventario
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @idProducto BIGINT, @precioVenta DECIMAL(10, 2), @cantidad INT, @tipoMovimiento VARCHAR(255)
+
+    SELECT @idProducto = INSERTED.id_producto, @precioVenta = INSERTED.precio_venta, @cantidad = INSERTED.cantidad_stock
+    FROM INSERTED
+
+    SET @tipoMovimiento = CASE 
+                            WHEN (SELECT cantidad_stock FROM DELETED) > @cantidad THEN 'Venta'
+                            ELSE 'Compra'
+                          END
+
+    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_producto)
+    VALUES (@tipoMovimiento, @precioVenta, GETDATE(), @tipoMovimiento, @idProducto)
+END
+
+CREATE TRIGGER TRG_InsertCita
+ON Citas
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @idCita BIGINT, @nombreCliente VARCHAR(255), @costoServicio DECIMAL(10, 2)
+
+    SELECT @idCita = INSERTED.id_cita, @nombreCliente = INSERTED.nombre_cliente
+    FROM INSERTED
+
+    SELECT @costoServicio = s.costo
+    FROM Servicios s
+    INNER JOIN INSERTED i ON s.id_servicio = i.id_servicio
+
+    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_cita)
+    VALUES ('Servicio reservado - ' + @nombreCliente, @costoServicio, GETDATE(), 'Ingreso', @idCita)
+END
