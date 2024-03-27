@@ -11,6 +11,8 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
+builder.Services.AddSingleton<ICitaModel, CitaModel>();
+builder.Services.AddSingleton<IServiciosModel, ServiciosModel>();
 builder.Services.AddSingleton<IProveedorModel, ProveedorModel>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => {
