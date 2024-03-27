@@ -34,7 +34,7 @@
                             <th>Saldo</th>
                             <th>Producto</th>
                             <th>Cliente</th>
-                            <th>Usuario</th>
+                           @*  <th>Usuario</th> *@
                         </tr>
                     </thead>
                     <tbody>
@@ -50,12 +50,8 @@
                                 <td>@item.saldo_pendiente</td>
                                 <td>@item.nombre_producto</td>
                                 <td>@item.nombre_cliente</td>
-                                <td>@item.nombre_usuario</td>
-                                <td>
-                                    
-
-                                    
-                                </td>
+                                @* <td>@item.nombre_usuario</td> *@
+                                
                             </tr>
                         }
                     </tbody>

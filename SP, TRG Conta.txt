@@ -1,4 +1,4 @@
-CREATE PROCEDURE ConsultarContabilidad
+CREATE OR ALTER PROCEDURE ConsultarContabilidad
 AS
 BEGIN
     SELECT 
@@ -8,49 +8,75 @@ BEGIN
         co.fecha_movimiento,
         co.tipo_movimiento,
         co.tipo_transaccion,
-        co.saldo_pendiente,
+        SUM(co.monto) OVER (ORDER BY co.fecha_movimiento, co.id_movimiento) AS saldo_pendiente,
         p.nombre_producto AS nombre_producto,
         ci.nombre_cliente AS nombre_cliente,
         u.nombre AS nombre_usuario
     FROM Contabilidad co
     LEFT JOIN Inventario p ON co.id_producto = p.id_producto
     LEFT JOIN Citas ci ON co.id_cita = ci.id_cita
-    LEFT JOIN Usuarios u ON co.id_usuario = u.id_usuario;
+    LEFT JOIN Usuarios u ON co.id_usuario = u.id_usuario
+    ORDER BY co.fecha_movimiento, co.id_movimiento;
 END
 
-CREATE TRIGGER TRG_InsertInventario
+CREATE OR ALTER TRIGGER TRG_InsertInventario
 ON Inventario
 AFTER INSERT, UPDATE
 AS
 BEGIN
-    DECLARE @idProducto BIGINT, @precioVenta DECIMAL(10, 2), @cantidad INT, @tipoMovimiento VARCHAR(255)
+    DECLARE @idProducto BIGINT, @precioVenta DECIMAL(10, 2), @cantidad INT, @tipoMovimiento VARCHAR(255), @tipoMovimiento1 VARCHAR(255),
+            @tipoTransaccion VARCHAR(255), @cantidadAnterior INT
 
     SELECT @idProducto = INSERTED.id_producto, @precioVenta = INSERTED.precio_venta, @cantidad = INSERTED.cantidad_stock
     FROM INSERTED
 
-    SET @tipoMovimiento = CASE 
-                            WHEN (SELECT cantidad_stock FROM DELETED) > @cantidad THEN 'Venta'
-                            ELSE 'Compra'
-                          END
+    IF EXISTS (SELECT * FROM DELETED)
+    BEGIN
+        SELECT @cantidadAnterior = d.cantidad_stock FROM DELETED d
+        SET @tipoMovimiento1 = CASE 
+                                WHEN @cantidadAnterior > @cantidad THEN 'Venta de producto'
+                                ELSE 'Compra de producto'
+                              END
 
-    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_producto)
-    VALUES (@tipoMovimiento, @precioVenta, GETDATE(), @tipoMovimiento, @idProducto)
+        -- Ajustar el monto según si es compra o venta
+        SET @precioVenta = CASE 
+                                WHEN @cantidadAnterior > @cantidad THEN @precioVenta  -- Venta
+                                ELSE -@precioVenta -- Compra, se hace negativo
+                           END
+    END
+    ELSE
+    BEGIN
+        -- Para el caso de INSERT, asumimos que es una compra y hacemos el monto negativo
+        SET @tipoMovimiento = 'Compra de producto'
+        SET @precioVenta = -@precioVenta
+    END
+
+    SET @tipoTransaccion = 'Sinpe'  
+
+    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_producto, tipo_transaccion)
+    VALUES (@tipoMovimiento, @precioVenta, GETDATE(), @tipoMovimiento1, @idProducto, @tipoTransaccion)
 END
 
-CREATE TRIGGER TRG_InsertCita
+
+CREATE OR ALTER TRIGGER TRG_InsertCita
 ON Citas
 AFTER INSERT
 AS
 BEGIN
-    DECLARE @idCita BIGINT, @nombreCliente VARCHAR(255), @costoServicio DECIMAL(10, 2)
+    DECLARE @idCita BIGINT, @nombreCliente VARCHAR(255), @descripcionServicio VARCHAR(255), 
+            @costoServicio DECIMAL(10, 2), @tipoTransaccion VARCHAR(255)
 
-    SELECT @idCita = INSERTED.id_cita, @nombreCliente = INSERTED.nombre_cliente
-    FROM INSERTED
+    SELECT 
+        @idCita = i.id_cita, 
+        @nombreCliente = i.nombre_cliente,
+        @costoServicio = s.costo,
+        @descripcionServicio = s.descripcion
+    FROM 
+        INSERTED i
+        INNER JOIN Servicios s ON i.id_servicio = s.id_servicio
 
-    SELECT @costoServicio = s.costo
-    FROM Servicios s
-    INNER JOIN INSERTED i ON s.id_servicio = i.id_servicio
+    SET @tipoTransaccion = 'Sinpe'
 
-    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_cita)
-    VALUES ('Servicio reservado - ' + @nombreCliente, @costoServicio, GETDATE(), 'Ingreso', @idCita)
+    INSERT INTO Contabilidad(descripcion_movimiento, monto, fecha_movimiento, tipo_movimiento, id_cita, tipo_transaccion)
+    VALUES ('Cita para: ' + @nombreCliente + ' - ' + @descripcionServicio, @costoServicio, GETDATE(), 'Ingreso por servicio', @idCita, @tipoTransaccion)
 END
