@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
+    "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
+    "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
         "projectName": "SalonPrograAvanzadaWeb",
-        "projectPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-        "packagesPath": "C:\\Users\\sroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\Prog.Avanzada.Web\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+        "projectPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "packagesPath": "C:\\Users\\aflor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aflor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,11 +42,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [

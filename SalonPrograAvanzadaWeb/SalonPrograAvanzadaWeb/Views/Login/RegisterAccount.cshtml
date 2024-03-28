@@ -1,0 +1,170 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.UsuarioEnt
+@{
+    ViewData["Title"] = "RegisterAccount";
+    Layout = "~/Views/Shared/_Layout_Externo.cshtml";
+}
+
+<div class="content-wrapper d-flex align-items-center auth px-0">
+    <div class="row w-100 mx-0">
+        <div class="col-lg-4 mx-auto">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                <div class="brand-logo text-center">
+                    <img src="~/lib/assets/img/salonutopialogo.jpg" alt="logo">
+
+                </div>
+
+                @using (Html.BeginForm("RegisterAccount", "Login", FormMethod.Post, new { @class = "pt-3", id = "registrationForm" }))
+                {
+                    @ViewBag.MensajePantalla
+
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Tipo de identificación</label>
+                        @Html.DropDownListFor(m => m.IdNationality, ViewBag.XYZ as List<SelectListItem>, new { @class = "form-control form-control-lg", @type = "text" })
+
+                        </div>
+
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Identificación</label>
+                        @Html.TextBoxFor(m => m.Identification, new { @onkeyup = "return ConsultarNombre()", @class = "form-control form-control-lg", @type = "text", @placeholder = "Escriba aquí...", id = "identificacion" })
+                            <span class="error-message" id="identificacion-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Nombre</label>
+                        @Html.TextBoxFor(m => m.NameUser, new { @class = "form-control form-control-lg", @type = "text", @placeholder = "Escriba aquí...", id = "nombre" })
+                            <span class="error-message" id="nombre-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Apellidos</label>
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control form-control-lg", @type = "text", @placeholder = "Escriba aquí...", id = "apellidos" })
+                            <span class="error-message" id="apellidos-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Correo Electrónico</label>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-lg", @type = "email", @placeholder = "Escriba aquí...", id = "correo" })
+                            <span class="error-message" id="correo-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Teléfono</label>
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control form-control-lg", @type = "text", @placeholder = "Escriba aquí...", id = "telefono" })
+                            <span class="error-message" id="telefono-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Contraseña</label>
+                        @Html.TextBoxFor(m => m.PasswordUser, new { @class = "form-control form-control-lg", @type = "password", @placeholder = "Escriba aquí...", id = "contrasenna" })
+                            <span class="error-message" id="contrasenna-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 16px;">Confirmar Contraseña</label>
+                        @Html.TextBoxFor(m => m.ConfPassUser, new { @class = "form-control form-control-lg", @type = "password", @placeholder = "Escriba aquí...", id = "Confcontrasenna" })
+                            <span class="error-message" id="Confcontrasenna-error"></span>
+                        </div>
+                        <div class="mt-3">
+                            <input type="button" onclick="validarFormulario();" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="REGISTRARSE">
+                        </div>
+                        <div class="text-center mt-4 font-weight-light">
+                            ¿Ya tienes una cuenta? <a href="@Url.Action("IniciarSesion","Login")" class="text-primary">Iniciar Sesión</a>
+                        </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/consultanombreapi.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<style>
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+@section scripts {
+        <script>
+            function validarFormulario() {
+
+
+                var identificacion = document.getElementById("identificacion").value;
+                var nombre = document.getElementById("nombre").value;
+                var apellidos = document.getElementById("apellidos").value;
+                var correo = document.getElementById("correo").value;
+                var telefono = document.getElementById("telefono").value;
+                var contrasenna = document.getElementById("contrasenna").value;
+                var Confcontrasenna = document.getElementById("Confcontrasenna").value;
+
+                var isValid = true;
+
+                // Resetear los mensajes de error
+                resetErrorMessages();
+
+                // Validación de identificación (no más de 20 caracteres alfanuméricos)
+                if (!identificacion || !/^[a-zA-Z0-9]{1,20}$/.test(identificacion)) {
+                    displayErrorMessage("identificacion", "Identificación debe tener entre 1 y 20 letras o números.");
+                    isValid = false;
+                }
+
+                // Validación de nombre (no debe contener números)
+                if (!nombre || /.*\d.*/.test(nombre)) {
+                    displayErrorMessage("nombre", "Nombre no debe contener números.");
+                    isValid = false;
+                }
+
+                // Validación de apellidos (no debe contener números)
+                if (!apellidos || /.*\d.*/.test(apellidos)) {
+                    displayErrorMessage("apellidos", "Apellidos no deben contener números.");
+                    isValid = false;
+                }
+
+                // Validación de correo electrónico
+                if (correo.trim() !== "" && !isValidEmail(correo)) {
+                    displayErrorMessage("correo", "Correo electrónico no válido.");
+                    isValid = false;
+                }
+
+                // Validación de teléfono (no más de 15 números)
+                if (!telefono || !/^\d{1,15}$/.test(telefono)) {
+                    displayErrorMessage("telefono", "Teléfono debe tener entre 1 y 15 digitos.");
+                    isValid = false;
+                }
+
+
+
+                // Validación de contraseña (no más de 20 caracteres)
+                if (!contrasenna || !/^(?=.*[a-zA-Z])(?=.*\d).{6,15}$/.test(contrasenna)) {
+                    displayErrorMessage("contrasenna", "La contraseña debe tener entre 6 y 15 caracteres, contener al menos una letra y al menos un número.");
+                    isValid = false;
+                }
+
+                // Validar que las contraseñas sean iguales
+                if (contrasenna !== Confcontrasenna) {
+                    displayErrorMessage("Confcontrasenna", "Las contraseñas no coinciden.");
+                    isValid = false;
+                }
+
+                // Enviar formulario solo si es válido
+                if (isValid) {
+                    document.getElementById("registrationForm").submit();
+                }
+            }
+
+            function resetErrorMessages() {
+                var errorElements = document.getElementsByClassName("error-message");
+                for (var i = 0; i < errorElements.length; i++) {
+                    errorElements[i].innerText = "";
+                }
+            }
+
+            function displayErrorMessage(elementId, message) {
+                document.getElementById(elementId + "-error").innerText = message;
+            }
+
+            // Función para validar el formato de correo electrónico
+            function isValidEmail(email) {
+                // Utiliza una expresión regular simple para validar el formato del correo electrónico
+                var emailRegex = /^.{6,}$/;
+                return emailRegex.test(email);
+            }
+        </script>
+}
+
