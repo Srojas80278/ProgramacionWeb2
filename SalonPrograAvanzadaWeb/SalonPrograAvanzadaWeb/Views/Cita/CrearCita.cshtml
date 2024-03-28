@@ -1,0 +1,55 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.CitaEnt
+
+@{
+    ViewData["Title"] = "CrearCita";
+}
+
+<h1>Crear Cita</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card card-secondary" style="margin-top:2%">
+            <div class="card-header">
+                <h3 class="card-title">Nueva Cita</h3>
+            </div>
+            @using (Html.BeginForm("CrearCita", "Cita", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+            {
+                <div class="card-body">
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.NombreCliente, new { @class = "control-label" })
+                        @Html.EditorFor(x => x.NombreCliente, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ingrese el nombre del cliente" } })
+                        @Html.ValidationMessageFor(x => x.NombreCliente, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Ubicacion, new { @class = "control-label" })
+                        @Html.EditorFor(x => x.Ubicacion, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ubicación" } })
+                        @Html.ValidationMessageFor(x => x.Ubicacion, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.FechaCita, new { @class = "control-label" })
+                        @Html.EditorFor(x => x.FechaCita, new { htmlAttributes = new { @class = "form-control", @placeholder = "Fecha de la cita", @type = "date" } })
+                        @Html.ValidationMessageFor(x => x.FechaCita, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Estilista, new { @class = "control-label" })
+                        @Html.EditorFor(x => x.Estilista, new { htmlAttributes = new { @class = "form-control", @placeholder = "Estilista" } })
+                        @Html.ValidationMessageFor(x => x.Estilista, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.IdServicio, new { @class = "control-label" })
+                        @Html.EditorFor(x => x.IdServicio, new { htmlAttributes = new { @class = "form-control", @placeholder = "ID del Servicio" } })
+                        @Html.ValidationMessageFor(x => x.IdServicio, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,4 +1,6 @@
-﻿namespace SalonPrograAvanzadaWeb.Entities
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace SalonPrograAvanzadaWeb.Entities
 {
     public class ServiciosEnt
     {
@@ -11,7 +13,17 @@
     }
     public class ServiciosRespuesta
     {
-        public string Codigo { get; set; }
-        public string Mensaje { get; set; }
-        public object Datos { get; set; } 
+        public ServiciosRespuesta()
+        {
+            Codigo = "1"; //Te retorno 1 si fue exitosa la operación.
+            Mensaje = string.Empty;
+            Dato = null;
+            Datos = null;
+        }
+    public string Codigo { get; set; }
+    public string Mensaje { get; set; }
+    public ServiciosEnt? Dato { get; set; }
+    public List<ServiciosEnt>? Datos { get; set; }
+    }
 }
+

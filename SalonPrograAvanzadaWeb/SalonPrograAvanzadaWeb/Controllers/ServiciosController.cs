@@ -6,10 +6,12 @@ namespace SalonPrograAvanzadaWeb.Controllers
 {
     public class ServiciosController (IServiciosModel _serviciosModel) : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult RegistrarServicios()
         {
             return View();
         }
+
 
         [HttpGet]
         public IActionResult ConsultarServicios()
@@ -24,6 +26,8 @@ namespace SalonPrograAvanzadaWeb.Controllers
                 return View(new List<ServiciosEnt>());
             }
         }
+
+      
 
         [HttpPost]
         public IActionResult RegistrarServicios(ServiciosEnt entidad)

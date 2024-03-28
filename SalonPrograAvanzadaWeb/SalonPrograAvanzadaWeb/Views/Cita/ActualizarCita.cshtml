@@ -1,0 +1,83 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.CitaEnt
+
+@{
+    ViewData["Title"] = "ActualizarCita";
+}
+
+<h1>Actualizar Cita</h1>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="card card-secondary" style="margin-top:2%">
+            <div class="card-header">
+                <h3 class="card-title">Actualización de Cita</h3>
+            </div>
+
+            @using (Html.BeginForm("ActualizarCita", "Citas", FormMethod.Post))
+            {
+                @Html.HiddenFor(x => x.IdCita)
+
+                <div class="card-body">
+                    @Html.LabelFor(x => x.NombreCliente)
+                    @Html.TextBoxFor(x => x.NombreCliente, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "Nombre del Cliente",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.LabelFor(x => x.Ubicacion)
+                    @Html.TextBoxFor(x => x.Ubicacion, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "Ubicación",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.LabelFor(x => x.FechaCita)
+                    @Html.TextBoxFor(x => x.FechaCita, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "Fecha de la Cita",
+                            @required = "true",
+                            @type = "date"
+                        })
+                    <br>
+
+                    @Html.LabelFor(x => x.Estilista)
+                    @Html.TextBoxFor(x => x.Estilista, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "Estilista",
+                            @required = "true"
+                        })
+                    <br>
+
+                    @Html.LabelFor(x => x.IdServicio)
+                    @Html.TextBoxFor(x => x.IdServicio, new
+                        {
+                            @class = "form-control",
+                            @placeholder = "ID del Servicio",
+                            @required = "true"
+                        })
+                    <br>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+</div>

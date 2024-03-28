@@ -1,0 +1,82 @@
+﻿@model IEnumerable<SalonPrograAvanzadaWeb.Entities.ServiciosEnt>
+
+@{
+    ViewData["Title"] = "ConsultarServicios";
+}
+
+<div class="container">
+    <h1>Consultar Servicios</h1>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Crear Nuevo</a>
+    </p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Título del Servicio</th>
+                    <th>Descripción</th>
+                    <th>Costo</th>
+                    <th>URL de Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.IdServicio)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TituloServicio)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Costo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.UrlImagen)</td>
+                        <td>
+                            <a class="btn btn-primary" href="@Url.Action("Edit", "Servicios", new { id = item.IdServicio })">
+                                <i class="fa fa-pencil-square-o"></i> Editar
+                            </a>
+                            <button type="button" class="btn btn-danger passingID" data-toggle="modal" data-target="#exampleModal"
+                                    data-id="@item.IdServicio" data-name="@item.TituloServicio">
+                                <i class="fa fa-trash-o"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("Delete", "Servicios", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <input type="hidden" id="id_servicio" name="id_servicio" value="">
+                    <p id="Question" style="font-weight: bold;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".passingID").click(function () {
+            $("#id_servicio").val($(this).attr('data-id'));
+            $("#Question").text("¿Desea eliminar el servicio: " + $(this).attr('data-name') + "?");
+        });
+    </script>
+}

@@ -7,7 +7,8 @@ namespace SalonPrograAvanzadaWeb.Controllers
 {
     public class CitaController(ICitaModel _citaModel) : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult CrearCita()
         {
             return View();
         }

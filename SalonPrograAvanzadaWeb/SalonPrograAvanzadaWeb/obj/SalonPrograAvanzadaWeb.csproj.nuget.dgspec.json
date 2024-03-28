@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
+    "C:\\Users\\axelc\\Documents\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
+    "C:\\Users\\axelc\\Documents\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\axelc\\Documents\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
         "projectName": "SalonPrograAvanzadaWeb",
-        "projectPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-        "packagesPath": "C:\\Users\\aflor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+        "projectPath": "C:\\Users\\axelc\\Documents\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+        "packagesPath": "C:\\Users\\axelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\axelc\\Documents\\GitHub\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aflor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\axelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

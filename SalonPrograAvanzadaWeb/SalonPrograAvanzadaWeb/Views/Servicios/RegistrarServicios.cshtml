@@ -1,0 +1,51 @@
+﻿@model SalonPrograAvanzadaWeb.Entities.ServiciosEnt
+
+@{
+    ViewData["Title"] = "RegistrarServicios";
+}
+<div class="container" style="margin-top:10%">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center card-title">Registrar Servicio</h4>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("RegistrarServicios", "Servicios", FormMethod.Post, new { @class = "needs-validation" }))
+                    {
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.IdServicio, "ID Servicio:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.IdServicio, new { @class = "form-control", @placeholder = "ID del Servicio", @required = "true" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.TituloServicio, "Título del Servicio:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.TituloServicio, new { @class = "form-control", @placeholder = "Ingrese el título del servicio", @required = "true" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.Descripcion, "Descripción:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control", @placeholder = "Describa el servicio", @required = "true" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.Costo, "Costo:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.Costo, new { @class = "form-control", @placeholder = "Costo del Servicio", @required = "true" })
+                        </div>
+
+                        <div class="mb-3">
+                            @Html.LabelFor(x => x.UrlImagen, "URL de la Imagen:", new { @class = "form-label" })
+                            @Html.TextBoxFor(x => x.UrlImagen, new { @class = "form-control", @placeholder = "URL de la imagen del servicio", @required = "true" })
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

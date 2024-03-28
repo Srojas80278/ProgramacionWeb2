@@ -17,79 +17,103 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SalonPrograAvanzadaWeb
 build_property.RootNamespace = SalonPrograAvanzadaWeb
-build_property.ProjectDir = C:\Users\aflor\OneDrive\Desktop\ProyectoPrograWeb\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb\
+build_property.ProjectDir = C:\Users\axelc\Documents\GitHub\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\aflor\OneDrive\Desktop\ProyectoPrograWeb\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb
+build_property.MSBuildProjectDirectory = C:\Users\axelc\Documents\GitHub\ProgramacionWeb2\SalonPrograAvanzadaWeb\SalonPrograAvanzadaWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/Index.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Cita/ActualizarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxBY3R1YWxpemFyQ2l0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Cita/CrearCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxDcmVhckNpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Cita/LeerCitas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxMZWVyQ2l0YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/IniciarSesion.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaWFyU2VzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/RegistrarUsuario.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Home/RegistrarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXJVc3VhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/ChangePassword.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/Index.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/IniciarSesion.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5pY2lhclNlc2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RecoverAccount.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RecoverAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVjb3ZlckFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RegisterAccount.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Login/RegisterAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXJBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/ActualizarProveedor.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/ActualizarProveedor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yXEFjdHVhbGl6YXJQcm92ZWVkb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/ConsultarProveedores.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/ConsultarProveedores.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yXENvbnN1bHRhclByb3ZlZWRvcmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/RegistrarProveedor.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Proveedor/RegistrarProveedor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yXFJlZ2lzdHJhclByb3ZlZWRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/Error.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Servicios/ActualizarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXEFjdHVhbGl6YXJTZXJ2aWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Servicios/ConsultarServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXENvbnN1bHRhclNlcnZpY2lvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Servicios/RegistrarServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFJlZ2lzdHJhclNlcnZpY2lvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewImports.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewStart.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qf2to8zqvs
 
-[C:/Users/aflor/OneDrive/Desktop/ProyectoPrograWeb/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout_Externo.cshtml]
+[C:/Users/axelc/Documents/GitHub/ProgramacionWeb2/SalonPrograAvanzadaWeb/SalonPrograAvanzadaWeb/Views/Shared/_Layout_Externo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfRXh0ZXJuby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-68597ikblu

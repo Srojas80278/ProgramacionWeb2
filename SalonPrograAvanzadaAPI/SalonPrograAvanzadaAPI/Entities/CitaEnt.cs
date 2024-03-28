@@ -11,8 +11,17 @@
     }
     public class CitaRespuesta
     {
+        public CitaRespuesta()
+        {
+            Codigo = "1"; //Te retorno 1 si fue exitosa la operación.
+            Mensaje = string.Empty;
+            Dato = null;
+            Datos = null;
+        }
+
         public string Codigo { get; set; }
         public string Mensaje { get; set; }
-        public object Datos { get; set; }
+        public CitaEnt? Dato { get; set; }
+        public List<CitaEnt>? Datos { get; set; }
     }
 }

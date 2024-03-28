@@ -40,6 +40,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Proveedor}/{action=RegistrarProveedor}/{id?}");
+    pattern: "{controller=Servicios}/{action=ConsultarServicios}/{id?}");
 
 app.Run();
