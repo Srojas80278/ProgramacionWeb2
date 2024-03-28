@@ -13,5 +13,7 @@
     {
         public string Codigo { get; set; }
         public string Mensaje { get; set; }
-        public object Datos { get; set; } 
+        public object Datos { get; set; }
+
+    }
 }

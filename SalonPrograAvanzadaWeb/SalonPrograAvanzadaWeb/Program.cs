@@ -14,6 +14,7 @@ builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddSingleton<ICitaModel, CitaModel>();
 builder.Services.AddSingleton<IServiciosModel, ServiciosModel>();
 builder.Services.AddSingleton<IProveedorModel, ProveedorModel>();
+builder.Services.AddSingleton<IContabilidadModel, ContabilidadModel>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => {
 	option.LoginPath = "/Login/IniciarSesion";

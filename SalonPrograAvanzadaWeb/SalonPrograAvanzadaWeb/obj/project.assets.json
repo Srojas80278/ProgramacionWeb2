@@ -6436,19 +6436,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aflor\\.nuget\\packages\\": {}
+    "C:\\Users\\sroja\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+      "projectUniqueName": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
       "projectName": "SalonPrograAvanzadaWeb",
-      "projectPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
-      "packagesPath": "C:\\Users\\aflor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aflor\\OneDrive\\Desktop\\ProyectoPrograWeb\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
+      "projectPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb.csproj",
+      "packagesPath": "C:\\Users\\sroja\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sroja\\OneDrive\\Escritorio\\Repositorio\\ProgramacionWeb2\\SalonPrograAvanzadaWeb\\SalonPrograAvanzadaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aflor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

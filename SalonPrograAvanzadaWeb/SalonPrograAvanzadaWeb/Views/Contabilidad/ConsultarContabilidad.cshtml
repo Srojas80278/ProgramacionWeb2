@@ -1,0 +1,65 @@
+﻿@{
+   
+    Layout = "~/Views/Shared/_Layout_externo.cshtml";
+}
+@model List<SalonPrograAvanzadaWeb.Entities.Contabilidad>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header" >
+                <br>
+                <h1 class="card-title" >Contabilidad</h1>
+                
+                <br>
+            </div>
+            
+
+            @if (ViewBag.MsjPantalla != null)
+            {
+                <br>
+               
+            }
+
+            <div class="card-body table-responsive p-0">
+                <table id="Info" class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Descripcion Movimiento</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>Transaccion</th>
+                            <th>Saldo</th>
+                            <th>Producto</th>
+                            <th>Cliente</th>
+                           @*  <th>Usuario</th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.id_movimiento</td>
+                                <td>@item.descripcion_movimiento</td>
+                                <td>@item.Monto</td>
+                                <td>@item.Fecha_Movimiento</td>
+                                <td>@item.tipo_movimiento</td>
+                                <td>@item.tipo_transaccion</td>
+                                <td>@item.saldo_pendiente</td>
+                                <td>@item.nombre_producto</td>
+                                <td>@item.nombre_cliente</td>
+                                @* <td>@item.nombre_usuario</td> *@
+                                
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/jquery.min.js"></script>
+
