@@ -11,11 +11,11 @@ BEGIN
         SUM(co.monto) OVER (ORDER BY co.fecha_movimiento, co.id_movimiento) AS saldo_pendiente,
         p.nombre_producto AS nombre_producto,
         ci.nombre_cliente AS nombre_cliente,
-        u.nombre AS nombre_usuario
+       
     FROM Contabilidad co
     LEFT JOIN Inventario p ON co.id_producto = p.id_producto
     LEFT JOIN Citas ci ON co.id_cita = ci.id_cita
-    LEFT JOIN Usuarios u ON co.id_usuario = u.id_usuario
+  
     ORDER BY co.fecha_movimiento, co.id_movimiento;
 END
 

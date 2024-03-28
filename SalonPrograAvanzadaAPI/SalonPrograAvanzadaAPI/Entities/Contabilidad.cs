@@ -12,7 +12,7 @@
             public decimal? saldo_pendiente { get; set; }
             public string? nombre_producto { get; set; }
             public string? nombre_cliente { get; set; }
-            public string? nombre_usuario { get; set; }
+         
         
     }
     public class ContabilidadRespuesta
